@@ -1,0 +1,44 @@
+
+<div class="row justify-content-center ">
+    <div class="col-md-8 row justify-content-center">
+      <!-- Here we load the selected image -->
+    <div class="col-md-8">
+      <div class="img">
+        <img src="/assets/tesla-red.jpg" class="logo-img" *ngIf="currentVar=='red'">
+      </div>
+      <div class="img">
+        <img src="/assets/tesla-blue.png" class="logo-img" *ngIf="currentVar=='blue'">
+      </div>
+      <div class="img">
+        <img src="/assets/tesla-green.png" class="logo-img" *ngIf="currentVar=='green'">
+      </div>
+      <div class="img">
+        <img src="/assets/tesla-purple.png" class="logo-img" *ngIf="currentVar=='purple'">
+      </div>
+
+
+<!-- Here we load all images to cache them -->
+      <div class="img" style="height:0; overflow: hidden;">
+        <img src="/assets/tesla-red.jpg" class="logo-img" >
+      </div>
+      <div class="img" style="height:0; overflow: hidden;">
+        <img src="/assets/tesla-blue.png" class="logo-img" >
+      </div>
+      <div class="img" style="height:0; overflow: hidden;">
+        <img src="/assets/tesla-green.png" class="logo-img" >
+      </div>
+      <div class="img" style="height:0; overflow: hidden;">
+        <img src="/assets/tesla-purple.png" class="logo-img" >
+      </div>
+
+<!-- Here we set the actuve color with changeColor function -->
+      <div class="selector" style="text-align: center;">
+        <span class="red" > <a (click)="changeColor(redVar) "  class="btn btn-link">  RED</a></span>
+        <span class="red" > <a (click)="changeColor(blueVar) " class="btn btn-link">  BLUE</a></span>
+        <span class="red" > <a (click)="changeColor(greenVar) " class="btn btn-link">  GREEN</a></span>
+        <span class="red" > <a (click)="changeColor(purpleVar) "  class="btn btn-link">  PURPLE</a></span>
+      </div>
+      
+    </div>
+    </div>
+  </div>
